@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type ="text/javascript">
+    function addNumbers() {
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        if(!isNaN(num1) && !isNaN(num2)){
+            var result = parseInt(num1) + parseInt(num2);
+            document.getElementById("result").value = result;
+        }else
+        alert("Invalid numbers provided");
+    }
+
+    function subNumbers() {
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        var result = num1 - num2;
+        document.getElementById("result").value = result;
+    }
+    </script>
+</head>
+<body>
+
+        First Number: <input id = "num1"> <br> 
+        Second Number: <input id = "num2"> <br> 
+        <input type = "button" value = "Addition" onclick="addNumbers()">  
+        <input type = "button" value = "Subtraction" onclick="subNumbers()"> <br>
+
+        <input id="result" readonly style="border:none">
+    
+</body>
+</html>

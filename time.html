@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function timer(){
+            dt = new Date();
+            time= dt.getHours()+ ":"+dt.getMinutes()+":"+dt.getSeconds();
+
+            digi.value = time;
+            window.status = time;
+ 
+        }
+        setInterval("timer()",1000);
+    </script>
+</head>
+<body>
+    <input id="digi" style="font:24pt verdana; border:none">
+</body>
+</html>

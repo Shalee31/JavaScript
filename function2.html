@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type = "text/javascript">
+    function firstFun(str){
+        alert(str);
+    }
+
+    function secondFun(obj){
+        str = obj.value;
+        alert(str);
+    }
+
+    function thirdFun(){
+        str = document.getElementById("third");
+        alert(str.value);
+    }
+
+    function fourthFun(){
+        var str = function(){
+            return document.getElementById("fourth");
+        }();//Anonymous function requires () paranthesis after curly braces
+        alert(str.value);
+    }
+    </script>
+</head>
+<body>
+    <input id = "first"> <input type = "button" value = "Demo" onclick="firstFun(first.value)"> <br>
+
+    <input id = "second"> <input type = "button" value = "Demo" onclick="secondFun(second)"> <br>
+
+    <input id = "third"> <input type = "button" value = "Demo" onclick="thirdFun()"> <br>
+
+    <input id = "fourth"> <input type = "button" value = "Nested" onclick="fourthFun()"> <br>
+</body>
+</html>

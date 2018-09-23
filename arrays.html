@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        var ar= new Array(1001,"Hello","21/6/2018",400002);
+        for(var i=0;i<ar.length;i++)
+            document.write("<h2>"+ar[i]);
+        
+        var week =["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+        week.forEach(function(day){
+            document.write("<h3>"+day);
+        });
+
+        for(var dow in week)//index
+            document.write("<h4>"+week[dow]);
+
+        for(var dow of week)//value
+            document.write("<h4>"+dow);
+
+    </script>
+</head>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Digi Frame</title>
+    <script type="text/javascript">
+    images = new Array("1.jpg","2.jpg","3.jpg");
+    colors = new Array("Blue", "Red", "Green", "Orange", "Purple");
+    idx = 0;
+    cdx = 0;
+
+    function changeImage() {
+            if(idx == images.length)
+                idx = 0;
+            myimg.src = images[idx];
+            idx++;
+    }
+
+    setInterval("changeImage()", 1000);
+
+    function changeColor() {
+            if(cdx == colors.length)
+                cdx = 0;
+            myhi.style.color = colors[cdx ++];
+
+           setTimeout("changeColor()", 500);
+    } 
+    </script>
+</head>
+<body onload="changeColor()">
+    <h1 align="center" id="myhi">Images Demo</h1><hr>
+    <img id="myimg" src="1.jpg" height="200" width="300">
+</body>
+</html>

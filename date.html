@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+    dt = new Date();
+    dow = new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+    mnths = new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+
+    document.write(dt.getDay() + "<br>");
+    document.write(dow[dt.getDay()] + "<br>");
+    document.write(dt.getDate() + "<br>");
+    document.write(dt.getMonth() + "<br>");
+    document.write(mnths[dt.getMonth()] + "<br>");
+    document.write(dt + "<br>"); 
+    
+    var dtvalue = dt.toString().split(" ");
+    for (var val of dtvalue)
+        document.write(val+ "<br>");
+
+    document.write(dt.getHours()+ ":"+dt.getMinutes()+":"+dt.getSeconds());
+    </script>
+</head>
+</html>
